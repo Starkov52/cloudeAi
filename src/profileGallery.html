@@ -42,10 +42,10 @@ console.log(value[0])
   profilePicture.setAttribute("id", value[0])
   profilePicture.style.background = `url("${value[0]}") no-repeat center / cover`
   profilePicture.style.position = 'relative'
-  ulPhoto.appendChild(profilePicture)
+  ulPhoto.prepend(profilePicture)
   profilePicture.insertAdjacentHTML(
     "afterbegin",
-    `<p class="profile__pictureInfo" ><span class="profile__days">${value[1].toString().slice(0, 15)}</span></p>`
+    `<p class="profile__pictureInfo" ><span class="profile__days">${value[1].toString().slice(0, 10)}</span></p>`
   )
 }
 ulPhoto.addEventListener("click", function(event) {

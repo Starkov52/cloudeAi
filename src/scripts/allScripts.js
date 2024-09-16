@@ -85,11 +85,20 @@ class User {
      function exitSite(event) {
         
             const objectPhoto = {}
-            const objectStyle = {}
+          
             user.createObject(objectPhoto)
         
         console.log(user.generatedPhoto)
          realTimeDataBase.post("PATCH", `${realTimeDataBase.url}users/${user.secretId}.json`, user)
+         realTimeDataBase.get("GET",`${realTimeDataBase.url}users.json`).then((response) => {
+            for(let [key, value] of response) {
+                if(key === user.secretId) {
+                    const user = value
+                    console.log(value)
+                    user.parseObject(user)
+                }
+            }
+         })
     };
     
 

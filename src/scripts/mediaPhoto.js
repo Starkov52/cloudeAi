@@ -84,7 +84,7 @@ for(let [key,value] of Object.entries(response)) {
     item.appendChild(div)
     item.appendChild(cardPrompt)
     item.appendChild(likeBtn)
-    ul.appendChild(item)
+    ul.prepend(item)
     cardsList.appendChild(ul)
     
     // Обработчик события на иконку профиля для перехода в профиль
@@ -100,7 +100,7 @@ for(let [key,value] of Object.entries(response)) {
                 if (key === targetCardId) {
                     // Обновляем информацию профиля
                     accountNameP.textContent = value._name;
-                    accountDescriptionP.textContent = value._description;
+                    accountDescriptionP.textContent = value.description;
                     accountLetterP.textContent = value._name.slice(0, 1);
                     accountLinkP.href = value.socialMedia
                     accountQuantityPhotoP.textContent = value.numberOfGeneratedPhoto

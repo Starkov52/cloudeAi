@@ -43,7 +43,15 @@ registrationWindows[0].style.display = "none"
 linkR.addEventListener("click", function(event) {
     registrationWindows[0].style.display = "flex" 
     registrationWindows[1].style.display = "none"
-    
+    setTimeout(()=>{
+    const cookie = localStorage.getItem(1)
+    const parseCookie = JSON.parse(cookie)
+ console.log(parseCookie)
+ inputNameA.value = parseCookie.login
+ inputPasswordA.value = parseCookie.password
+ inputNameA.style.backgroundColor = "#99a842"
+ inputPasswordA.style.backgroundColor = "#99a842"
+}, 1000)
     })
     // Проверка на валидность никнейма
     inputNameR.addEventListener("input", function(event) {
@@ -136,6 +144,16 @@ btnRegistration.addEventListener("click", function(event) {
  
         user.numberOfGeneratedPhoto = user.numberOfGeneratedPhoto
 
+        const data = localStorage.getItem(1)
+
+        if(JSON.parse(data)) {
+            localStorage.clear()
+        }
+const cookieData = {
+    password: user._password,
+    login: user._name,
+}
+localStorage.setItem(1, JSON.stringify(cookieData))
         
       
   
@@ -146,8 +164,9 @@ btnRegistration.addEventListener("click", function(event) {
     realTimeDataBase.post("POST", `${realTimeDataBase.url}users.json`, user).then((data) => console.log(data)).catch((error) => console.log(error))
     
 })
-btnAutorization.addEventListener("click", function(event) {
 
+btnAutorization.addEventListener("click", function(event) {
+ 
     realTimeDataBase.get("GET",`${realTimeDataBase.url}users.json`).then((data) =>  { 
         console.log(data)
         let digits = false

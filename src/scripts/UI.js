@@ -38,6 +38,7 @@ leaveBtn.addEventListener("click", function(event) {
     const link = document.createElement("a")
     link.href = "/src/index.html"
     link.click()
+    exitSite()
 })
 // Логика движения окон
 profileButton.addEventListener("click", function(event) {
@@ -198,6 +199,10 @@ menuButton.addEventListener("click", function(event) {
         pcContainer.addEventListener("click", function(event) {
         readyPictureWindow.classList.add("active")
         readyImage.src = src
+
+        if(imageOptions.size === "square_hd") {
+            readyImage.style.width = "300px"
+        }
         readyDowlandLink.href = src
         readyPrompt.textContent = imageOptions.prompt
         const card = new photoCard(src, 0, imageOptions.prompt, user._name, new Date, user.secretId)
