@@ -1,0 +1,108 @@
+.registrationWindow {
+@include fontW();
+position: absolute;
+top: 150px;
+left: 700px;
+width: 450px;
+height: 600px;
+overflow: hidden;
+background: url("/src/img/Group 6 (1).png") no-repeat top center / cover;
+border-radius: 20px;
+    &__inner {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 60px;
+        gap: 40px;
+        
+    }
+
+    &__helloText {
+font-size: 25px;
+letter-spacing: 2px;
+color:rgb(209, 198, 198)
+    }
+
+    &__form {
+        position: relative;
+        margin-right: 100px;
+    }
+
+    &__inputNameA, &__inputNameR {
+        width: 200px;
+        height: 20px;
+        border: none;
+        border-bottom: 1px solid white;
+        background: rgb(255, 255, 255);
+        border-radius: 3px;
+        padding-bottom: 10px;
+
+        opacity: 0.7;
+    }
+    &__icon {
+        position: absolute;
+        left: -40px;
+        top: 5px;
+        width: 25px;
+        height: 25px;
+    }
+
+    &__inputPasswordA, &__inputPasswordR  {
+        width: 200px;
+        height: 20px;
+        border: none;
+        border-bottom: 1px solid white;
+        background: rgb(255, 255, 255);
+        border-radius: 3px;
+        padding-bottom: 10px;
+        opacity: 0.7;
+        
+    }
+ &__input {
+    outline:none
+ }
+    &__buttonWelcom {
+        align-self: end;
+        margin-top: 40px;
+        margin-right: 70px;
+        width: 180px;
+        height: 35px;
+        border: none;
+        border-radius: 7px;
+    }
+    &__infoPassword {
+        width: 25px;
+        height: 25px;
+        position: absolute;
+        left: 215px;
+        top: 7px;
+    }
+    &__infoName {
+        width: 25px;
+        height: 25px;
+        position: absolute;
+        left: 215px;
+        top: 7px;
+    }
+    &__buttonRegistration {
+        align-self: end;
+        margin-top: 40px;
+        margin-right: 70px;
+        width: 180px;
+        height: 35px;
+        border: none;
+        border-radius: 7px;
+    }
+&__linkA {
+    color:rgb(202, 116, 219);
+}
+&__linkR {
+    color:rgb(202, 116, 219);
+}
+    &__btnText {
+    }
+}
+.registrationWindow__inner1 {
+    display: none;
+}

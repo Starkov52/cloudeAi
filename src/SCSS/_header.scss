@@ -1,0 +1,123 @@
+.header {
+position: sticky;
+top: 0;
+width: 1940px;
+height: 50px;
+background-color: whitesmoke;
+opacity: 80%;
+margin-bottom: 30px;
+z-index: 10;
+transition: 14s ease-in;
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        align-self: center;
+        gap: 0 60px;
+        height: 50px;
+    }
+
+    &__gitHub {
+        margin-left: 30px;
+    }
+
+    &__GitHubLink {
+    }
+
+    &__logo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 0 5px;
+        margin-left: 100px;
+    }
+
+    &__nameLogo {
+        font-size: 25px;
+    }
+
+    &__logoImg {
+    }
+
+    &__nav {
+        display: flex;
+        justify-content: space-between;
+        gap: 0 20px;
+        margin-right: 40px;
+    }
+    
+
+		&__openGallery {
+            width: 33px;
+        height: 30px;
+        border: none;
+        background: transparent;
+    
+        align-self: start;
+		}
+
+		&__galleryImg {
+        width: 32px;
+        height: 32px;
+		}
+       
+
+            &__openGalleryPublic {
+                width: 33px;
+                height: 30px;
+                border: none;
+                background: transparent;
+            
+                align-self: start;
+            }
+    
+            &__galleryImgPublic {
+                width: 32px;
+                height: 32px;
+            }
+    
+    
+
+
+
+    &__darhTheme {
+        width: 32px;
+        height: 32px;
+    }
+
+    &__createimg {
+        width: 30px;
+        height: 30px;
+    }
+
+    &__profile {
+        width: 33px;
+        height: 30px;
+    }
+
+    &__menu {
+    }
+
+    &__item {
+        width: 35px;
+        height: 5px;
+
+        border-bottom: 1px solid black;
+    }
+}
+
+
+.footer {
+
+    &__inner {
+    }
+
+    &__info {
+    }
+
+    &__logo {
+    }
+
+    &__logoName {
+    }
+}

@@ -1,0 +1,222 @@
+@mixin fontW {
+    font-family: "Dela Gothic One", sans-serif;
+    font-weight: 350;
+    font-style: normal;
+  }
+.header {
+    display: flex;
+    @include fontW();
+    justify-content: center;
+    width: 1920px;
+    height: 150px;
+    margin-top: -7px;
+  
+    &__nav {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        width: 1605px;
+        height: 80px;
+        background-color: white;
+        opacity: 0.8;
+        justify-self: center;
+        align-self: start;
+        border-bottom-left-radius: 30px;
+        border-bottom-right-radius: 30px;
+        z-index: 1;
+    }
+
+    &__leaveBtn {
+        width: 55px;
+        height: 52px;
+        border: none;
+        background: transparent;
+        margin-right: 130px;
+        margin-top: 5px;
+        align-self: start;
+
+    }
+
+    &__leaveImg {
+        width: 55px;
+        height: 55px;
+    
+    }
+    &__titleExitBtn {
+        z-index: 9;
+        color: rgb(0, 0, 0);
+        margin-top: -6px;
+        font-size: 15px;
+        font-weight: 200px;
+    }
+
+    &__menuBtn {
+        width: 55px;
+        height: 55px;
+        border: none;
+        background: transparent;
+        margin-top: 8px;
+       align-self: start;
+    }
+
+    &__menuImg {
+        width: 50px;
+        height: 50px;
+    }
+    &__titleMenuBtn {
+        z-index: 9;
+        color: rgb(0, 0, 0);
+        margin-top: -6px;
+        font-size: 15px;
+        font-weight: 400px;
+    }
+
+    &__galleryBtn {
+        width: 55px;
+        height: 55px;
+        border: none;
+        background: transparent;
+        margin-top: 5px;
+       align-self: start;
+    }
+
+    &__galleryImg {
+        width: 55px;
+        height: 55px;
+    }
+    &__titleGalleryBtn {
+        z-index: 9;
+        color: rgb(0, 0, 0);
+        margin-top: -6px;
+        font-size: 14px;
+        font-weight: 400px;
+    } 
+
+    &__selectBtns {
+       
+    }
+
+    &__backBtn {
+        width: 55px;
+        height: 55px;
+        border: none;
+        background: transparent;
+    }
+
+    &__backImg {
+        width: 55px;
+        height: 55px;
+        border: none;
+        background: transparent;
+    }
+
+    &__forwardBtn {
+        width: 55px;
+        height: 55px;
+        border: none;
+        background: transparent;
+    }
+
+    &__forwardImg {
+        width: 55px;
+        height: 55px;
+    }
+
+    &__profileBtn {
+        width: 55px;
+        height: 55px;
+        border: none;
+        background: transparent;
+        margin-top: 5px;
+       align-self: start;
+    }
+    
+    &__profileImg {
+        width: 55px;
+        height: 55px;
+        
+    }
+    &__titleProfileBtn {
+        z-index: 9;
+        color: rgb(0, 0, 0);
+        margin-top: -6px;
+        font-size: 14px;
+        font-weight: 400px;
+    }
+
+    &__selectScale {
+        width: 238px;
+        height: 55px;
+        background: rgb(218, 216, 216);
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        border-radius: 10px;
+    }
+
+    &__select {
+        background-color: rgb(91, 89, 92);
+        border-radius: 4px;
+        color: rgb(255, 255, 255);
+        
+    }
+
+    &__size {
+    }
+    &__nav {
+        z-index: 0;
+    }
+
+		&__darkTheme {
+            border: none;
+            background: transparent;
+		}
+
+		&__darkThemeIcon {
+            width: 50px;
+            height: 50px;
+		}
+
+
+    &__openSelectBtn {
+        width: 50px;
+        height: 50px;
+        border: none;
+        background: transparent;
+        justify-self: end;
+    }
+
+    &__openSelectImg {
+        width: 54px;
+        height: 49px;
+    }
+
+    &__downland {
+       width: 238px;
+       height: 55px;
+       background-color: rgb(218, 216, 216);
+       display: flex;
+       align-items: center;
+       justify-content: space-around;
+       margin-right: 50px;
+       border-radius: 10px;
+    }
+
+    &__dowlandText {
+    }
+
+    &__dowlandImg {
+        width: 55px;
+        height: 55px;
+    }
+    &__dowlandImg:hover {
+        background-color: rgba(0, 0, 0, 0.203);
+        border-radius: 20px;
+        transition: background-color 0.7s ease;
+        }
+
+}
+button {
+    @include fontW();
+    
+}

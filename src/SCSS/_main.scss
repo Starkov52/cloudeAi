@@ -1,0 +1,491 @@
+.main {
+    color:beige;
+    
+}
+.soloPhoto {
+    display: flex;
+    flex-direction:column;
+    gap: 50px 5px;
+    margin-bottom: 30px;
+}
+.city {
+display:flex;
+align-content: center;
+transform: translateX(-1300px);
+transition: 2s ease-out;
+    &__img {
+        margin-left: 20px;
+    }
+
+    &__text {
+     opacity: 0.01;
+     font-size: 30px;
+     align-self: center;
+     width: 1000px;
+     margin-left: 50px;
+     transition: 3s linear;
+    }
+}
+.space {
+    display:flex;
+    align-content: center;
+    transition: 2s ease-out;
+    transform: translateX(1300px);
+    &__img {
+        order: 2;
+        margin-right: 20px;
+    }
+
+    &__text {
+     font-size: 30px;
+     align-self: center;
+     width: 1000px;
+     margin-left: 20px;
+     order: 1;
+     opacity: 0.01;
+     transition: 3s linear;
+    }
+}
+.bigImage {
+margin-top: 200px;
+margin-bottom: 250px;
+display: flex;
+transform: translateY(1000px);
+transition: 2.5s ease-out;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+gap: 30px;
+    &__img {
+    }
+
+    &__text {
+        font-size: 30px;
+        opacity: 0.01;
+        transition: 3s ease;
+    }
+}
+.slider {
+  display: flex;
+  flex-direction:column;
+  gap: 80px 0;
+  margin-top: 100px;
+    &__photoOne {
+        width: 400px;
+        height: 228px;
+        border-radius: 10px;
+    }
+
+    &__photoTwo {
+        width: 400px;
+        height: 228px;
+        border-radius: 10px;
+    }
+
+    &__photoThree {
+        width: 400px;
+        height: 228px;
+        border-radius: 10px;
+    }
+
+    &__photoFour {
+        width: 400px;
+        height: 228px;
+        border-radius: 10px;
+    }
+   &__photoFive {
+        width: 400px;
+        height: 228px;
+        border-radius: 10px;
+   }
+   &__photoSix {
+        width: 400px;
+        height: 228px;
+        border-radius: 10px;
+   }
+    &__title {
+        width: 700px;
+        height: 25px;
+        justify-self: center;
+        align-self: center;
+        font-size: 30px;
+    }
+
+    &__headerRow {
+        display: flex;
+        flex-wrap: nowrap;
+        gap: 0 110px;
+        animation: sliderRight 60s linear infinite;
+        margin-right: 100px;
+        transition: 3s ease;
+    }
+
+    &__centerRow {
+        display: flex;
+        flex-wrap: nowrap;
+        gap: 0 110px;
+        transition: 3s ease;
+        animation: sliderLeft 60s linear infinite;
+    }
+
+    &__bottomRow {
+        display: flex;
+        flex-wrap: nowrap;
+        gap: 0 110px;
+        margin-left: 100px;
+        animation: sliderRight 60s linear infinite;
+        transition: 3s ease;
+    }
+}
+@keyframes sliderLeft {
+    0% {
+        transform: translateX(2000px)
+    }
+    100% {
+        transform: translateX(-2500px)
+    }
+    
+}
+@keyframes sliderRight {
+    0% {
+        transform: translateX(-3000px)
+    }
+    100% {
+        transform: translateX(2500px)
+    }
+}
+.startCreate {
+    margin: 100px 0px 100px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+gap: 10px;
+    &__title {
+        font-size: 25px;
+        transform: skew(0.1deg);
+        transition: transform 6s ease;
+    }
+
+    &__btn {
+        border-radius: 15px;
+        border:none;
+        transition: opacity 3s ease;
+    }
+
+    &__img {
+    }
+}
+.whiteWindow {
+z-index: 111;
+width: 100%;
+height: 953px;
+background: white;
+color: rgb(36, 31, 31);
+display: none;
+grid-template-columns: 1fr 1fr 1fr;
+grid-template-rows: 1fr 1fr 1fr;
+
+    &__text1 {
+        font-size: 30px;
+        grid-row: 1 / 2 ;
+        grid-column:  1 / 3;
+        align-self: center;
+        margin-left: 40px;
+        background: url("/src/img/Group 1.png") no-repeat center / cover;
+        width: 900px;
+        height: 50px;
+        border-radius: 15px;
+        transition: 3s ease-out;
+        padding-left: 40px;
+        transform: translateX(-1000px)
+    }
+    &__text2 {
+        font-size: 30px;
+        grid-row: 2 / 3 ;
+        grid-column:  2 / 4;
+        align-self: center;
+        margin-left: 40px;
+        background: url("/src/img/Group 2.png") no-repeat center / cover;
+        width: 850px;
+        height: 75px;
+        border-radius: 15px;
+        justify-self: center;
+        margin-left: 170px;
+        padding-left: 20px;
+        transition: 3s ease-out;
+        transform: translateX(1000px)
+    }
+    &__text3 {
+        font-size: 30px;
+        grid-row: 3 / 4 ;
+        grid-column:  1 / 2;
+        align-self: center;
+        padding-left: 40px;
+        background: url("/src/img/Group 1.png") no-repeat center / cover;
+        width: 500px;
+        height: 50px;
+        border-radius: 15px;
+        transition: 3s ease-out;
+        transform: translateX(-1000px)
+    }
+
+    &__btn {
+        border: none;
+        border-radius: 15px;
+        width: 400px;
+        height: 85px;
+        grid-row: 3 / 4 ;
+        grid-column:  3 / 4;
+        justify-self: center;
+        align-self: center;
+        margin-top: 160px;
+        transition: 3s ease-out;
+        transform: translateX(1000px)
+    }
+}
+.aside {
+    width: 510px;
+    height: 740px;
+    z-index: 15;
+    position: absolute;
+    left:0px;
+    top: 95px;
+    transition: 0.8s ease;
+    transform: translateX(-520px);
+    
+    &__profile {
+            border: none;
+            width: 510px;
+            height: 740px;
+            
+        }
+    }
+    .publicImages {
+     position: fixed;
+     top: 70px;
+     left: 50px;
+     width: 1800px;
+     height: 850px;
+     border-radius: 20px;
+     color: black;
+     background-color: rgb(175, 173, 170);
+     overflow-y: auto;
+     display: none;
+		&__inner {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-top: 20px;
+		}
+
+		&__item {
+        background-color: aliceblue;
+        border-radius: 20px;
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+        width: 550px;
+        height: 260px
+		}
+
+		&__image {
+            margin-top: 10px;
+            margin-left: 10px;
+            height: 158px;
+            width: 300px;
+            border-radius: 10px;
+            grid-row: 1 / 2;
+            grid-column: 1 / 2;
+		}
+
+		&__prompt {
+            grid-row: 2 / 3;
+            grid-column: 1 / 2;
+            width: 300px;
+            word-wrap: break-word;
+            margin-left: 10px;
+		}
+
+		&__like {
+            grid-row: 2 / 3;
+            grid-column: 2 / 3;
+            border: none;
+            background: gray;
+            width: 75px;
+            height: 50px;
+            border-radius: 10px;
+            justify-self: end;
+            align-self: end;
+            margin: 0px 10px 10px 0px;
+		}
+
+		&__likeImg {
+		}
+
+		&__digitsOfLike {
+		}
+        &__closeIcon {
+            position: fixed;
+            left: 1810px;
+            top: 69px;
+            width: 32px;
+            height: 32px;
+        }
+}
+.profile {
+    margin-top: 10px;
+    grid-row: 1 / 2;
+    grid-column: 2 / 3;
+    width: 150px;
+    height: 180px;
+    justify-self: center;
+    align-self: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px 0px;
+    background-color: gray;
+    border-radius: 20px;
+    overflow: hidden;
+		&__icon {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background-color:rgb(110, 77, 161);
+            position: relative;
+		}
+        &__letter {
+            position: absolute;
+            font-size: 25px;
+            top: 18px;
+            left: 18px;
+        }
+
+		&__nickName {
+            max-width: 150px;
+            font-size: 13px;
+            word-wrap: wrap;
+		}
+
+		&__data {
+		}
+}
+.publicImages.active {
+    display: flex;
+}
+
+.account {
+    display: none;
+    border-top-right-radius: 35px;
+    border-bottom-right-radius: 10px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 35px;
+    color:antiquewhite;
+    width: 510px;
+    margin-right: 125px;
+    height: 740px;
+    background: url("/src/img/futuristic-landscape-dubai.jpg") no-repeat center / cover;
+    overflow-x: hidden;
+    position: fixed;
+    top: 130px;
+    left: 663px;
+    &__information {
+        margin-top: 15px;
+        padding-bottom: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 20px 0px;
+    }
+
+    &__name {
+        font-size: 30px;
+        font-weight: 800;
+        letter-spacing: 1px;
+    }
+
+    &__img {
+        background-color: palevioletred;
+        position: relative;
+        width: 164px;
+        height: 164px;
+        border-radius: 50%;
+    }
+
+    &__letter {
+        position: absolute;
+        font-size: 60px;
+        top: 50px;
+        left: 50px;
+    }
+
+    &__content {
+        margin-top: 50px;
+        background: linear-gradient(to bottom, rgba(0, 0, 0, 0.2) 10%, rgba(0, 0, 0, 0.7) 40%, rgba(0, 0, 0, 0.9) 100%);
+        width: 100%;
+        height: 61%;
+        overflow-y: auto;
+        position: relative;
+    }
+
+    &__infoList {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 0px 5px;
+        gap: 60px;
+     
+       color: aliceblue;
+    }
+
+    &__itemDescription {
+    }
+
+    &__description {
+        width: 90%;
+        align-self: center;
+        padding-left: 20px;
+        margin-top: 40px;
+    }
+
+    &__redactorDescription {
+    }
+
+    &__item {
+        justify-content: center;
+    align-content: center;
+    }
+
+    &__arrivalSite {
+    }
+
+    &__publicPhoto {
+    }
+
+    &__quantityPhoto {
+    }
+
+    &__socialMedia {
+    }
+
+    &__link {
+    }
+
+    &__instaImg {
+    }
+
+    &__redactorMediaLink {
+    }
+}
+
+ 
+
+.account.active {
+    display: block
+}

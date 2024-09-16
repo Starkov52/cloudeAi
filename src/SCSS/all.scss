@@ -1,0 +1,35 @@
+@import "_header.scss";
+@import "_reset.scss";
+@import "_main.scss";
+@import "_footer.scss";
+@import "_adaptationP.scss";
+@mixin font {
+  font-family: "Dela Gothic One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+html { 
+    @include font();
+    box-sizing: border-box;
+}
+.container {
+    width: 1900px;
+    height: 1080px;
+}
+body {
+   
+    overflow-x: hidden;
+    transition: background 1s ease;
+    background: url("/src/img/3d-vertical-background-with-abstract-style (1).jpg")  top / cover;
+}
+::-webkit-scrollbar {
+    width: 9px;
+}
+::-webkit-scrollbar-track {
+    background-color: rgb(20, 15, 114);
+}
+::-webkit-scrollbar-thumb {
+    width: 8px;
+    border-radius: 2px;
+    background-color: rgb(168, 168, 168);
+}
