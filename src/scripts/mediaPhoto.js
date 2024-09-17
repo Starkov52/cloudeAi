@@ -71,9 +71,9 @@ for(let [key,value] of Object.entries(response)) {
     likeBtn.classList.add("publicImages__like")
     const likeImage = document.createElement("img")
     likeImage.classList.add("publicImages__likeImg")
-    likeImage.src = "/src/img/favorite_15049585.png"
+    likeImage.src = "/img/favorite_15049585.png"
     const quantity = document.createElement("p")
-    quantity.classList.add("/publicImages__digitsOfLike")
+    quantity.classList.add(".publicImages__digitsOfLike")
     quantity.textContent = value.like
     div.appendChild(autorName)
     div.appendChild(cardDate)

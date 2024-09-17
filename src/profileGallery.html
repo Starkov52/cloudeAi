@@ -4,68 +4,64 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Профиль</title>
-    <link rel="stylesheet" href="/src/css/allP.css">
+    <link rel="stylesheet" href="/css/allP.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Manrope:wght@200..800&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Press+Start+2P&display=swap" rel="stylesheet">
-
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Manrope:wght@200..800&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Press+Start+2P&display=swap" rel="stylesheet">
 </head>
 <body>
     <section class="profile">
         <div class="profile__information">
             <h1 class="profile__name">Meow</h1>
             <div class="profile__img"><span class="profile__letter">M</span></div>
-           
         </div>
         
         <div class="profile__content">
             <div class="profile__pictures">
                 <h1 class="profile__titleGallery">Галерея</h1>
-               
             </div>
-             </div>
-         </div>
-         
+        </div>
     </section>
+    
     <script>
       window.addEventListener("message", function(event) {
-const photosObject = event.data.generatedPhoto
-const ulPhoto = document.querySelector(".profile__pictures")
-const name = document.querySelector(".profile__name")
-const nameLetter = document.querySelector(".profile__letter")
-name.textContent = event.data.nameUser
-nameLetter.textContent = event.data.nameUser.slice(0, 1)
-for(let [key, value] of photosObject.entries())  {
-console.log(value[0])
-  const profilePicture = document.createElement("div")
-  profilePicture.classList.add("profile__picture")
-  profilePicture.setAttribute("id", value[0])
-  profilePicture.style.background = `url("${value[0]}") no-repeat center / cover`
-  profilePicture.style.position = 'relative'
-  ulPhoto.prepend(profilePicture)
-  profilePicture.insertAdjacentHTML(
-    "afterbegin",
-    `<p class="profile__pictureInfo" ><span class="profile__days">${value[1].toString().slice(0, 10)}</span></p>`
-  )
-}
-ulPhoto.addEventListener("click", function(event) {
-  const target = event.target.closest(".profile__picture")
-  if(target) {
-    const href = target.getAttribute("id")
-
-    const profileContent = document.querySelector(".profile__content")
-    ulPhoto.style.display = "none"
-    profileContent.style.background = `url("${href}") no-repeat center / cover `
-    profileContent.style.height = "350px"
-    profileContent.style.width = "510px"
-    profileContent.style.position = "absolute"
-    profileContent.style.left = "0px"
-    profileContent.style.top = "300px"
-  }
-
-})
-
-      })
+        const photosObject = event.data.generatedPhoto;
+        const ulPhoto = document.querySelector(".profile__pictures");
+        const name = document.querySelector(".profile__name");
+        const nameLetter = document.querySelector(".profile__letter");
+        
+        name.textContent = event.data.nameUser;
+        nameLetter.textContent = event.data.nameUser.slice(0, 1);
+        
+        for (let [key, value] of photosObject.entries())  {
+          console.log(value[0]);
+          const profilePicture = document.createElement("div");
+          profilePicture.classList.add("profile__picture");
+          profilePicture.setAttribute("id", value[0]);
+          profilePicture.style.background = `url("${value[0]}") no-repeat center / cover`;
+          profilePicture.style.position = 'relative';
+          ulPhoto.prepend(profilePicture);
+          profilePicture.insertAdjacentHTML(
+            "afterbegin",
+            `<p class="profile__pictureInfo" ><span class="profile__days">${value[1].toString().slice(0, 10)}</span></p>`
+          );
+        }
+        
+        ulPhoto.addEventListener("click", function(event) {
+          const target = event.target.closest(".profile__picture");
+          if (target) {
+            const href = target.getAttribute("id");
+            const profileContent = document.querySelector(".profile__content");
+            ulPhoto.style.display = "none";
+            profileContent.style.background = `url("${href}") no-repeat center / cover `;
+            profileContent.style.height = "350px";
+            profileContent.style.width = "510px";
+            profileContent.style.position = "absolute";
+            profileContent.style.left = "0px";
+            profileContent.style.top = "300px";
+          }
+        });
+      });
     </script>
 </body>
 </html>

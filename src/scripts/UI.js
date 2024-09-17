@@ -36,16 +36,16 @@ exitPicture.addEventListener("click", function(event) {
 // Выход на презентационную часть проекта
 leaveBtn.addEventListener("click", function(event) {
     const link = document.createElement("a")
-    link.href = "/src/index.html"
+    link.href = "/index.html"
     link.click()
-    exitSite()
+    exitSite
 })
 // Логика движения окон
 profileButton.addEventListener("click", function(event) {
 aside.style.transform = "translateX(0px)"
-iframeInfo.src = "/src/profile.html"
+iframeInfo.src = "/profile.html"
 const img = document.createElement("img")
-img.src = "/src/img/free-icon-close-4318452.png"
+img.src = "/img/free-icon-close-4318452.png"
 img.style.width = "32px"
 img.style.height = "232x"
 img.style.position = "absolute"
@@ -66,7 +66,7 @@ setTimeout(() => {
 menuButton.addEventListener("click", function(event) {
     style.style.transform = "translateX(0px)"
     const img = document.createElement("img")
-        img.src = "/src/img/free-icon-close-4318452.png"
+        img.src = "/img/free-icon-close-4318452.png"
         img.style.width = "32px"
         img.style.height = "232x"
         img.style.position = "absolute"
@@ -101,11 +101,11 @@ menuButton.addEventListener("click", function(event) {
        }
     })
     galleryButton.addEventListener("click", function(event) {
-        iframeInfo.src = "/src/profileGallery.html"
+        iframeInfo.src = "/profileGallery.html"
         aside.style.transform = "translateX(0px)"
         iframeInfo.style.height = "100%"
         const img = document.createElement("img")
-        img.src = "/src/img/free-icon-close-4318452.png"
+        img.src = "/img/free-icon-close-4318452.png"
         img.style.width = "32px"
         img.style.height = "232x"
         img.style.position = "absolute"
@@ -170,7 +170,7 @@ menuButton.addEventListener("click", function(event) {
     if(imageOptions.prompt !== null) {
         picture.style.display = "none"
         const video = document.createElement("video")
-        video.src = "/src/img/trim-video-online.com_1725480637_video-gde-na-kompiut_5bBylmZh.mp4"
+        video.src = "/img/trim-video-online.com_1725480637_video-gde-na-kompiut_5bBylmZh.mp4"
         video.style.height = "215px"
         video.style.width = "250px"
         video.style.alignSelf = "start"
@@ -191,7 +191,7 @@ menuButton.addEventListener("click", function(event) {
         photoPlenka.classList.add("footer__item")
         footerUl.appendChild(photoPlenka)
         const scale = document.createElement("img")
-        scale.src = "/src/img/free-icon-resize-8121828 1.png"
+        scale.src = "/img/free-icon-resize-8121828 1.png"
         scale.style.position = "absolute"
         scale.style.left = "320px"
         user.addGeneretePhoto([src, new Date])
@@ -226,13 +226,13 @@ menuButton.addEventListener("click", function(event) {
      const body = document.querySelector("body")
      const header = document.querySelector(".header__nav")
      if(darkTheme) {
-    themeImg.src = "/src/img/free-icon-moon-phase-9176573 (1).png"
-    body.style.background = "url(/src/img/4853433.jpg) no-repeat center / cover"
+    themeImg.src = "/img/free-icon-moon-phase-9176573 (1).png"
+    body.style.background = "url(/img/4853433.jpg) no-repeat center / cover"
     header.style.background = "grey"
     darkTheme = false
    } else {
-     themeImg.src = "/src/img/free-icon-sun-6421095.png"
-     body.style.background = "url(/src/img/dark.png) no-repeat center / cover"
+     themeImg.src = "/img/free-icon-sun-6421095.png"
+     body.style.background = "url(/img/dark.png) no-repeat center / cover"
      darkTheme = true
      header.style.backgroundColor = "white"
    }

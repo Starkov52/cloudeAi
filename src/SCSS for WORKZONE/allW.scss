@@ -10,7 +10,7 @@
   }
 body {
   
-    background: url("/src/img/dark.png") no-repeat top / cover;
+    background: url("../img/dark.png") no-repeat center  / cover;
     overflow: hidden;
     transition: background 0.5s ease-out;
 }
@@ -23,9 +23,6 @@ transition:  0.7s ease;
 }
 html {
     box-sizing: border-box;
-    height: 700px;
-    overflow: hidden;
-    min-height: 100%;
-height: 100%;
+  
 }
 

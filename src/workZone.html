@@ -1,181 +1,110 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>WorkZone</title>
-        <link rel="stylesheet" href="/src/css/allW.css">
-        <meta charset="UTF-8"/>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Manrope:wght@200..800&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Press+Start+2P&display=swap" rel="stylesheet">
-        <body>
-            
-            <header class="header">
-              <nav class="header__nav">
-                <button class="header__leaveBtn">
-                    <img  src="/src/img/free-icon-exit-149409 1.png" class="header__leaveImg">
-                    <p class="header__titleExitBtn">Выход</p>
-                </button>
-                <button class="header__menuBtn">
-                    <img  src="/src/img/free-icon-various-6471611 1.png" class="header__menuImg">
-                    <p class="header__titleMenuBtn">Стили</p>
-                </button>
-                <button class="header__galleryBtn">
-                    <img  src="/src/img/free-icon-gallery-1375157 1.png" class="header__galleryImg">
-                    <p class="header__titleGalleryBtn">Галлерея</p>
-                </button>
-                
-                <button class="header__profileBtn">
-                    <img  src="/src/img/free-icon-user-5617164 1 (1).png" class="header__profileImg">
-                    <p class="header__titleProfileBtn">Профиль</p>
-                </button>
-                <form class="header__selectScale">
-                  <select class="header__select">
-                    <option class="header__size" value="square_hd">square(квадратное изображение)</option>
-                    <option class="header__size" value="portrait_4_3">HD portrait(4:3)</option>
-                    <option class="header__size" value="portrait_16_9">HD portrait(16:9)</option>
-                    <option class="header__size" value="landscape_4_3">Landscape(4:3)</option>
-                    <option class="header__size" value="landscape_16_9">Landscape(16:9)</option>
-                  </select>
-                  <button class="header__openSelectBtn">
-                    <img  src="/src/img/free-icon-resize-8121828 1.png" class="header__openSelectImg">
-                 </button>
-                </form>
-                <div class="header__downland">
-                    <span class="header__dowlandText">Скачать</span>
-                    <img src ="/src/img/free-icon-download-8141102 1.png" class="header__dowlandImg"/>
-                </div>
-                <button class="header__darkTheme">
-                    <img class="header__darkThemeIcon" src="/src/img/free-icon-sun-6421095.png">
-                </button>
-              </nav>
-           
-            </header>
-            <main class="main">
-                
-                <section class="workWindow">
-                    <div s class="workWindow__window">
-                    <img src="/src/img/image.png" class="workWindow__picture"/>
-                    </div>
-                    <div class="workWindow__panel">
-                        <textarea  class="workWindow__input" placeholder="Введите промпт"></textarea>
-                        <button class="workWindow__generateBtn">
-                            <img src="/src/img/free-icon-magic-wand-5999045 1.png" class="workWindow__generateImg"/>
-                        </button>
-                    </div>
-                </section>
-                </div>
-            
-                <aside class="aside">
-                    <iframe src="/src/profileGallery.html" class="aside__profile" ></iframe>
-                </aside>
-                <section class="styles">
-                    <div class="styles__header">
-                        <h1 class="styles__title">Выбери свой стиль!</h1>
-                        <img src="/src/img/kandinsky-download-1724582449292.png" class="styles__image"/>
-                        <p class="styles__enabledStyle">3D рендер</p>
-                        </div>
-                        <div class="styles__menu">
-                        <ul class="styles__mostUsedStyles">
-                          
-                        </ul>
-                        <ul class="styles__select">
-                            <li class="styles__menuStyles">
-                                <img src="/src/img/kandinsky-download-1724616784870.png" name="Малевич" class="styles__menuStyleImg" valueS="в стиле Малевича"/>
-                                <p class="styles__nameMenuStyle">Малевич</p>
-                            </li>
-                            <li class="styles__menuStyles">
-                                <img src="/src/img/kandinsky-download-1724615590246.png" name="Портретное фото" class="styles__menuStyleImg" valueS="в стиле портретной фотографии"/>
-                                <p class="styles__nameMenuStyle">Портретное фото</p>
-                            </li>
-                            <li class="styles__menuStyles">
-                                <img src="/src/img/kandinsky-download-1724615641812.png" name="Классицизм "class="styles__menuStyleImg" valueS="в стиле клаассического арта,реализм"/>
-                                <p class="styles__nameMenuStyle">Классицизм</p>
-                            </li>
-                            <li class="styles__menuStyles">
-                                <img src="/src/img/kandinsky-download-1724617999396.png" name="Киберпанк" class="styles__menuStyleImg" valueS="в стиле киберпанк"/>
-                                <p class="styles__nameMenuStyle">Киберпанк</p>
-                            </li>
-                            <li class="styles__menuStyles">
-                                <img src="/src/img/kandinsky-download-1724615726829.png" name="Детальное фото" class="styles__menuStyleImg" valueS="ультро-реаалистичное фото"/>
-                                <p class="styles__nameMenuStyle">Детальное фото</p>
-                            </li>
-                            <li class="styles__menuStyles">
-                                <img src="/src/img/kandinsky-download-1724616893172.png" name="Картина маслом" class="styles__menuStyleImg" valueS="в стиле написанной картины маслом"/>
-                                <p class="styles__nameMenuStyle">Картина маслом</p>
-                            </li>
-                            <li class="styles__menuStyles">
-                                <img src="/src/img/kandinsky-download-1724615844684.png" name="3D рендер" class="styles__menuStyleImg" valueS="очень детализованное фото в стиле 3д рендераа"/>
-                                <p class="styles__nameMenuStyle">3D рендер</p>
-                            </li>
-                            <li class="styles__menuStyles">
-                                <img src="/src/img/kandinsky-download-1724615776400.png" name="Мультфильм" class="styles__menuStyleImg" valueS="в стиле 2д мультика"/>
-                                <p class="styles__nameMenuStyle">Мультфильм</p>
-                            </li>
-                            <li class="styles__menuStyles">
-                                <img src="/src/img/kandinsky-download-1724618725598.png" name="Пиксель арт" class="styles__menuStyleImg" valueS="в стиле пиксель арта"/>
-                                <p class="styles__nameMenuStyle">Пиксель арт</p>
-                            </li>
-                        </ul>
-                    </div>
-                </section>
-                <section class="picture">
-                     <img src="/src/img/free-icon-close-4318452.png" class="picture__exit"/>
-                        <img class="picture__ready" src="/src/img/sports-car-driving-on-asphalt-road-at-night-generative-ai 1.png"/>
-                        <p class="picture__prompt">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptates nobis perspiciatis rem accusantium commodi distinctio saepe corporis quis voluptate obcaecati. Veniam consectetur blanditiis impedit quo, mollitia hic quas accusamus suscipit!</p>
-                        <button class="picture__dowlandBtn">
-                            <a class="picture__textBtn" href="" download>Скачать </a>
-                            <img src="/src/img/free-icon-download-8141102 1.png">
-                        </button>
-                
-                </section>
-                <section class="registrationWindow">
-                    <div class="registrationWindow__inner">
-                        <h1 class="registrationWindow__helloText">Вход</h1>
-                        <form class="registrationWindow__form">
-                            <img src="/src/img/login_3040753.png" class="registrationWindow__icon"/>
-                            <input type="text" class="registrationWindow__inputNameA" placeholder="Введите логин"/>
-                        </form>
-                        <form class="registrationWindow__form">
-                            <img src="/src/img/password_14562503.png" class="registrationWindow__icon"/>
-                            <input type="text" class="registrationWindow__inputPasswordA" placeholder="Введите пароль"/>
-                        </form>
-                        <button class="registrationWindow__buttonWelcom">
-                            <span class="registrationWindow__btnText">Войти</span>
-                        </button>
-                        <a class="registrationWindow__linkA" href="#" >Создать аккаунт</a>
-                    </div>
-                    <div class="registrationWindow__inner">
-                        <h1 class="registrationWindow__helloText">Регистрация</h1>
-                        <form class="registrationWindow__form">
-                            <img src="/src/img/login_3040753.png" class="registrationWindow__icon"/>
-                            <input type="text" class="registrationWindow__inputNameR" placeholder="Введите логин"/>
-                            <img src="/src/img/free-icon-info-1445402 (1).png" class="registrationWindow__infoName"/>
-                        </form>
-                        <form class="registrationWindow__form">
-                            <img src="/src/img/password_14562503.png" class="registrationWindow__icon"/>
-                            <input type="text" class="registrationWindow__inputPasswordR" placeholder="Введите пароль"/>
-                            <img src="/src/img/free-icon-info-1445402 (1).png" class="registrationWindow__infoPassword"/>
-                        </form>
-                        <button class="registrationWindow__buttonRegistration">
-                            <span class="registrationWindow__btnText">Зарегистрироваться</span>
-                        </button>
-                        <a class="registrationWindow__linkR" href="#" >Вернуться ко входу</a>
-                    </div>
-                </section>
-            </main>
-            <footer class="footer">
-                <ul class="footer__inner">
-                 
-               
-                </ul>
-            </footer>
-            <script src="/src/scripts/allScripts.js"></script>
-            <script src="/src/scripts/dataBase.js"></script>
-            <script src="/src/scripts/apiAi.js"></script>
-            <script src="/src/scripts/UI.js"></script>
-            <script src="/src/scripts/data.js"></script>
-            <script src="/src/scripts/registration.js"></script>
-        </body>
-    </head>
+  <head>
+    <title>WorkZone</title>
+    <link rel="stylesheet" href="/css/allW.css">
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Manrope:wght@200..800&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Press+Start+2P&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <header class="header">
+      <nav class="header__nav">
+        <button class="header__leaveBtn">
+          <img src="/img/free-icon-exit-149409 1.png" class="header__leaveImg">
+          <p class="header__titleExitBtn">Выход</p>
+        </button>
+        <button class="header__menuBtn">
+          <img src="/img/free-icon-various-6471611 1.png" class="header__menuImg">
+          <p class="header__titleMenuBtn">Стили</p>
+        </button>
+        <button class="header__galleryBtn">
+          <img src="/img/free-icon-gallery-1375157 1.png" class="header__galleryImg">
+          <p class="header__titleGalleryBtn">Галлерея</p>
+        </button>
+        <button class="header__profileBtn">
+          <img src="/img/free-icon-user-5617164 1 (1).png" class="header__profileImg">
+          <p class="header__titleProfileBtn">Профиль</p>
+        </button>
+        <form class="header__selectScale">
+          <select class="header__select">
+            <option class="header__size" value="square_hd">square(квадратное изображение)</option>
+            <option class="header__size" value="portrait_4_3">HD portrait(4:3)</option>
+            <option class="header__size" value="portrait_16_9">HD portrait(16:9)</option>
+            <option class="header__size" value="landscape_4_3">Landscape(4:3)</option>
+            <option class="header__size" value="landscape_16_9">Landscape(16:9)</option>
+          </select>
+          <button class="header__openSelectBtn">
+            <img src="/img/free-icon-resize-8121828 1.png" class="header__openSelectImg">
+          </button>
+        </form>
+        <div class="header__downland">
+          <span class="header__dowlandText">Скачать</span>
+          <img src="/img/free-icon-download-8141102 1.png" class="header__dowlandImg"/>
+        </div>
+        <button class="header__darkTheme">
+          <img class="header__darkThemeIcon" src="/img/free-icon-sun-6421095.png">
+        </button>
+      </nav>
+    </header>
+
+    <main class="main">
+      <section class="workWindow">
+        <div class="workWindow__window">
+          <img src="/img/image.png" class="workWindow__picture"/>
+        </div>
+        <div class="workWindow__panel">
+          <textarea class="workWindow__input" placeholder="Введите промпт"></textarea>
+          <button class="workWindow__generateBtn">
+            <img src="/img/free-icon-magic-wand-5999045 1.png" class="workWindow__generateImg"/>
+          </button>
+        </div>
+      </section>
+
+      <aside class="aside">
+        <iframe src="/profileGallery.html" class="aside__profile"></iframe>
+      </aside>
+
+      <section class="styles">
+        <div class="styles__header">
+          <h1 class="styles__title">Выбери свой стиль!</h1>
+          <img src="/img/kandinsky-download-1724582449292.png" class="styles__image"/>
+          <p class="styles__enabledStyle">3D рендер</p>
+        </div>
+        <div class="styles__menu">
+          <ul class="styles__mostUsedStyles"></ul>
+          <ul class="styles__select">
+            <!-- Menu styles items -->
+          </ul>
+        </div>
+      </section>
+
+      <section class="picture">
+        <img src="/img/free-icon-close-4318452.png" class="picture__exit"/>
+        <img class="picture__ready" src="/img/sports-car-driving-on-asphalt-road-at-night-generative-ai 1.png"/>
+        <p class="picture__prompt">Lorem ipsum dolor sit amet consectetur...</p>
+        <button class="picture__dowlandBtn">
+          <a class="picture__textBtn" href="" download>Скачать </a>
+          <img src="/img/free-icon-download-8141102 1.png">
+        </button>
+      </section>
+
+      <section class="registrationWindow">
+        <!-- Registration form contents -->
+      </section>
+    </main>
+
+    <footer class="footer">
+      <ul class="footer__inner"></ul>
+    </footer>
+
+    <script src="/scripts/allScripts.js"></script>
+    <script src="/scripts/dataBase.js"></script>
+    <script src="/scripts/apiAi.js"></script>
+    <script src="/scripts/UI.js"></script>
+    <script src="/scripts/data.js"></script>
+    <script src="/scripts/registration.js"></script>
+  </body>
 </html>

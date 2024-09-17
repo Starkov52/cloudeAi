@@ -47,7 +47,7 @@ if(scrollY >= 0) {
 })
 const blackHole = document.createElement("div")
 startBtn.addEventListener("click", function(event) {
-    startBtn.style.background = `url("/src/img/broken-frosted-glass-realistic-icon.png") no-repeat center / cover`
+    startBtn.style.background = `url("/img/broken-frosted-glass-realistic-icon.png") no-repeat center / cover`
     startBtn.style.opacity = "0"
     mainRow.style.animation = "sliderRight 1s linear infinite"
             bottomRow.style.animation = "sliderRight 1s linear infinite"
@@ -145,12 +145,12 @@ const themeBtn = document.querySelector(".header__darhTheme")
 let digitsCheckThem = 2
 themeBtn.addEventListener("click", function(event) {
     if(digitsCheckThem % 2 === 0) {
-    body.style.background = `url("/src/img/a7395e40-2054-4147-8314-728e940a8063.jpg") no-repeat center / cover`
-    themeBtn.src = "/src/img/free-icon-sun-1857296.png"
+    body.style.background = `url("/img/a7395e40-2054-4147-8314-728e940a8063.jpg") no-repeat center / cover`
+    themeBtn.src = "../img/free-icon-sun-1857296.png"
     digitsCheckThem += 1
     } else if(digitsCheckThem % 2 !== 0) {
-    body.style.background = `url("/src/img/3d-vertical-background-with-abstract-style (1).jpg") no-repeat center / cover`
-    themeBtn.src = "/src/img/free-icon-moon-phase-9176573 1.png"
+    body.style.background = `url("/img/3d-vertical-background-with-abstract-style (1).jpg") no-repeat center / cover`
+    themeBtn.src = "../img/free-icon-moon-phase-9176573 1.png"
     digitsCheckThem += 1
     }
 })

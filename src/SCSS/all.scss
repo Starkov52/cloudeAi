@@ -14,13 +14,13 @@ html {
 }
 .container {
     width: 1900px;
-    height: 1080px;
+    height: 1080px;  
 }
 body {
    
     overflow-x: hidden;
     transition: background 1s ease;
-    background: url("/src/img/3d-vertical-background-with-abstract-style (1).jpg")  top / cover;
+    background: url("/img/3d.jpg") no-repeat  center / cover;
 }
 ::-webkit-scrollbar {
     width: 9px;
