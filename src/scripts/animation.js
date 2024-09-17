@@ -149,7 +149,7 @@ themeBtn.addEventListener("click", function(event) {
     themeBtn.src = "../img/free-icon-sun-1857296.png"
     digitsCheckThem += 1
     } else if(digitsCheckThem % 2 !== 0) {
-    body.style.background = `url("/img/3d-vertical-background-with-abstract-style (1).jpg") no-repeat center / cover`
+    body.style.background = `url("/img/3d.jpg") no-repeat center / cover`
     themeBtn.src = "../img/free-icon-moon-phase-9176573 1.png"
     digitsCheckThem += 1
     }
