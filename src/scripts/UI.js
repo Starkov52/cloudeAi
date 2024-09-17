@@ -38,7 +38,7 @@ leaveBtn.addEventListener("click", function(event) {
     const link = document.createElement("a")
     link.href = "/index.html"
     link.click()
-    exitSite
+    exitSite()
 })
 // Логика движения окон
 profileButton.addEventListener("click", function(event) {

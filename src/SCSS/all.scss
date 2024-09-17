@@ -11,14 +11,14 @@
 html { 
     @include font();
     box-sizing: border-box;
+    overflow-x: hidden;
 }
 .container {
     width: 1900px;
     height: 1080px;  
 }
 body {
-   
-    overflow-x: hidden;
+    
     transition: background 1s ease;
     background: url("/img/3d.jpg") no-repeat  center / cover;
 }

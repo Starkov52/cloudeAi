@@ -115,7 +115,14 @@ for(let [key,value] of Object.entries(response)) {
     })
     // Инициализация кнопки закрытия а также установление на эту кнопку обработчика события
     const closeBtn = document.querySelector(".publicImages__closeIcon")
+    const closeProfileBtn = document.querySelector(".publicImages__closeIconP")
     closeBtn.addEventListener("click", function(event) {
+        publicWindow.classList.remove("active")
+        ul.remove()
+        accountSectionP.classList.remove("active")
+       
+    })
+    closeProfileBtn.addEventListener("click", function(event) {
         publicWindow.classList.remove("active")
         ul.remove()
         accountSectionP.classList.remove("active")
