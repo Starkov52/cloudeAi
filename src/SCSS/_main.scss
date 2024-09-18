@@ -307,6 +307,9 @@ grid-template-rows: 1fr 1fr 1fr;
             width: 300px;
             word-wrap: break-word;
             margin-left: 10px;
+            background-color: #D9D9D9;
+            border-bottom-left-radius: 30px;
+            border-top-right-radius: 30px;
 		}
 
 		&__like {
@@ -335,6 +338,41 @@ grid-template-rows: 1fr 1fr 1fr;
             height: 32px;
    
         }
+        
+
+            &__warningNotification {
+                width: 600px;
+                height: 180px;
+                border-radius: 10px;
+                background-color:rgba(0, 0, 0, 0.7);
+                position: absolute;
+                top: 50px;
+                left: 600px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                color: white;
+                opacity: 1;
+                transition: opacity 3s ease;
+                z-index: 999999999999999;
+            }
+            
+    
+            &__warningIcon {
+                width: 64px;
+                height:64px;
+            }
+    
+            &__warningText {
+                font-size: 17px;
+                margin-top: 10px;
+                align-self: center;
+                justify-self: center;
+                width: 450px;
+            }
+    
+    
 }
 .profile {
     margin-top: 10px;
@@ -349,16 +387,19 @@ grid-template-rows: 1fr 1fr 1fr;
     align-items: center;
     flex-direction: column;
     gap: 20px 0px;
-    background-color: gray;
+    background-color: #D9D9D9;
     border-radius: 20px;
     overflow: hidden;
 		&__icon {
             width: 60px;
             height: 60px;
             border-radius: 50%;
-            background-color:rgb(110, 77, 161);
+            background-color: rgb(110, 77, 161);
             position: relative;
 		}
+        &__icon:hover {
+border-radius: 5px;
+    background-color:rgb(106, 98, 119);    }
         &__letter {
             position: absolute;
             font-size: 25px;

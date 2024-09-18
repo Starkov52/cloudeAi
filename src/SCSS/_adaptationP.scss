@@ -134,15 +134,16 @@
          top: 50px;
          left: 0px;
          width: 380px;
-         height: 850px;
-         overflow-y: auto;
+         height: 100%;
          display: none;
             &__inner {
+                width: 390px;
                 display: flex;
                 flex-direction: column;
                 gap: 10px;
                 justify-content: center;
-                margin-top: -210px;
+                margin-top: -50px;
+                overflow-y: auto;
             }
   
             &__item {

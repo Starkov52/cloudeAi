@@ -20,6 +20,10 @@ transition: 14s ease-in;
     &__gitHub {
         margin-left: 30px;
     }
+    &__gitHub:hover {
+        background-color: gray;
+        border-radius: 5px;
+    }
 
     &__GitHubLink {
     }
@@ -30,6 +34,11 @@ transition: 14s ease-in;
         align-items: center;
         gap: 0 5px;
         margin-left: 100px;
+    }
+
+    &__logo:hover {
+        background-color: gray;
+        border-radius: 5px;
     }
 
     &__nameLogo {
@@ -56,11 +65,16 @@ transition: 14s ease-in;
         align-self: start;
 		}
 
+        &__openGallery:hover {
+            background-color: gray;
+            border-radius: 5px;
+        }
 		&__galleryImg {
         width: 32px;
         height: 32px;
 		}
        
+
 
             &__openGalleryPublic {
                 width: 33px;
@@ -69,6 +83,10 @@ transition: 14s ease-in;
                 background: transparent;
             
                 align-self: start;
+            }
+            &__openGalleryPublic:hover {
+                background-color: gray;
+                border-radius: 5px;
             }
     
             &__galleryImgPublic {
@@ -84,15 +102,27 @@ transition: 14s ease-in;
         width: 32px;
         height: 32px;
     }
+    &__darhTheme:hover {
+        background-color: gray;
+        border-radius: 5px;
+    }
 
     &__createimg {
         width: 30px;
         height: 30px;
     }
+    &__createimg:hover {
+        background-color: gray;
+        border-radius: 5px;
+    }
 
     &__profile {
         width: 33px;
         height: 30px;
+    }
+    &__profile:hover {
+        background-color: gray;
+        border-radius: 5px;
     }
 
     &__menu {

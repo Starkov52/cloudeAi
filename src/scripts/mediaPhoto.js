@@ -1,3 +1,4 @@
+// Инициализация всех активных обьектов
 const accountInformationP = document.querySelector('.account__information');
 const accountNameP = document.querySelector('.account__name');
 const accountImgP = document.querySelector('.account__img');
@@ -12,15 +13,25 @@ const accountQuantityPhotoP = document.querySelector('.account__quantityPhoto');
 const accountSocialMediaP = document.querySelector('.account__socialMedia');
 const accountLinkP = document.querySelector('.account__link');
 const accountInstaImgP = document.querySelector('.account__instaImg');
-
 const accountSectionP = document.querySelector('.account');
-// Открытие доски публикованных фото пользователей
 const public = document.querySelector(".header__galleryImgPublic")
 const cardsList = document.querySelector(".publicImages")
-
+// Открытие доски публикованных фото пользователей
 let item
 public.addEventListener("click", function(event) {
    publicWindow.classList.add("active")
+   // Появление окна предупреждения о тонкостях работы изобржений
+   function sendWarningNotification() {
+    const notification = document.querySelector(".publicImages__warningNotification")
+     setTimeout(() => {
+       notification.style.opacity = "0"
+       setTimeout(() => {
+       notification.remove()
+    },3000)
+     }, 5000)
+       }
+    sendWarningNotification()
+    // Функция для получения в обьект всех созданных пользователями карточек 
    function getCard(url, method, body) {
     return fetch(url, {
         headers: {
@@ -37,6 +48,7 @@ public.addEventListener("click", function(event) {
         }
     })
    }
+   // Изображение всех карточек в модальном окне 
    getCard("https://telegrambotfishcombat-default-rtdb.firebaseio.com/usersCards.json", "GET").then((response) => {
    
        const ul = document.createElement("ul")
@@ -113,7 +125,7 @@ for(let [key,value] of Object.entries(response)) {
 
 
     })
-    // Инициализация кнопки закрытия а также установление на эту кнопку обработчика события
+    // Инициализация кнопки закрытия, а также установление на эту кнопку обработчика события
     const closeBtn = document.querySelector(".publicImages__closeIcon")
     const closeProfileBtn = document.querySelector(".publicImages__closeIconP")
     closeBtn.addEventListener("click", function(event) {
@@ -122,12 +134,14 @@ for(let [key,value] of Object.entries(response)) {
         accountSectionP.classList.remove("active")
        
     })
+    // Обработчик события на кнопку закрытия,при нажатии модльнео окно карточек зкрывается,с последующими действиями в ней
     closeProfileBtn.addEventListener("click", function(event) {
         publicWindow.classList.remove("active")
         ul.remove()
         accountSectionP.classList.remove("active")
        
     })
+    // При нажатии на пустую область окно с карточками закрывается
     window.addEventListener("click", function(event) {
         if(event.target.closest(".publicImages__inner") && !event.target.closest(".account") && !event.target.closest(".publicImages__item") && !event.target.closest(".soloPhoto")) {
             accountSectionP.classList.remove("active")

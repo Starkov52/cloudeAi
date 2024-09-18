@@ -1,7 +1,7 @@
-// Отправка и получение данных с помощью базы данных FIREBASE class DataBase {
+// Отправка и получение данных с помощью базы данных FIREBASE 
 class dataBase {
     url = "https://telegrambotfishcombat-default-rtdb.firebaseio.com/"
-
+// Метод для отправки обьекта в БД
     post(method, url , body) {
         return new Promise((resolve, reject) => {
         const xhr = new XMLHttpRequest()
@@ -23,7 +23,7 @@ class dataBase {
         xhr.send(JSON.stringify(body))
         })
     }
-
+// Метод для получение response from RealTimeDataBase
     get(method, url) {
         return fetch(url, {
             headers: { 

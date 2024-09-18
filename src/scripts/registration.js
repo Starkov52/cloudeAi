@@ -10,9 +10,11 @@ const user = new Proxy(new User("Alex", 342, new Map(), new Set(), "", 0 , "", n
         return target[prop]
     }
 })
+// Функция регистрации которая запускается при заходе на сайт
 function startRegistration() {
     let name  = ""
     let password = ""
+    // Инициализация всех активных обьектов
 const registrationWindows = document.querySelectorAll(".registrationWindow__inner")
 const windowR = document.querySelector(".registrationWindow")
 const registrationBtn = document.querySelector(".registrationWindow__buttonRegistration")
@@ -51,6 +53,8 @@ linkR.addEventListener("click", function(event) {
  inputPasswordA.value = parseCookie.password
  inputNameA.style.backgroundColor = "#99a842"
  inputPasswordA.style.backgroundColor = "#99a842"
+ inputNameA.dispatchEvent(new Event("input", {bubbles: true}))
+ inputPasswordA.dispatchEvent(new Event("input", {bubbles: true}))
 }, 1000)
     })
     // Проверка на валидность никнейма
@@ -79,6 +83,7 @@ linkR.addEventListener("click", function(event) {
             inputPasswordR.style.border = "3px solid red"
         }
     })
+    // Ну про инпуты писать смыслаа не вижу,как по мне тут все понятно
     inputNameA.addEventListener("input", function(event) {
         let value = event.target.value
         name = value
@@ -137,6 +142,7 @@ linkR.addEventListener("click", function(event) {
             },1000)
         }, 5000)
     })
+    // Обработчик события кнопки "Зрегистрироваться". Происходит отпрвление данных в БД, а также создается обьект которые отправляется в локальное хранилище устройства
 btnRegistration.addEventListener("click", function(event) {
     user.generateRandomId()
     user.setDateRegistration()
@@ -182,7 +188,7 @@ btnAutorization.addEventListener("click", function(event) {
                 main.style.filter = "blur(0px)"
                 header.style.filter = "blur(0px)"
                 footer.style.filter = "blur(0px)"
-console.log(profile.generatedPhoto)
+                console.log(profile.generatedPhoto)
                 user.parseObject(profile.generatedPhoto)
               
                 user._name = profile._name

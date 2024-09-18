@@ -1,3 +1,4 @@
+// Получение сообщения в виде обьекта с данными от родительского HTML
 window.addEventListener("message", function(event) {
     const nameUser = document.querySelector(".profile__name")
     const description = document.querySelector(".profile__description")
@@ -14,7 +15,7 @@ window.addEventListener("message", function(event) {
    
 
 })
-// Способ изменения данных аккаунта
+// Инициаализация всех активных обьектов
 const mainObject = document.querySelector(".profile__content")
 const reDescriptionBtn = document.querySelector(".profile__redactorDescription")
 const reMediaLinkBtn = document.querySelector(".profile__redactorMediaLink")
@@ -22,7 +23,7 @@ const description = document.querySelector(".profile__description")
 const itemDescription = document.querySelector(".profile__itemDescription")
 const itemMedia = document.querySelector(".profile__socialMedia")
 const mediaImage = document.querySelector(".profile__link")
-
+// Система изменения описания аккунта
 reDescriptionBtn.addEventListener("click", function(event) {
 const input = document.createElement("input")
 const value = description.textContent
@@ -38,7 +39,7 @@ itemDescription.appendChild(input)
 reDescriptionBtn.style.display = "none"
 
 })
-
+// Система изменения ссылки на инстаграмм пользователя
 reMediaLinkBtn.addEventListener("click", function(event) {
 const input = document.createElement("input")
 const value = mediaImage.href
@@ -53,6 +54,7 @@ input.style.backgroundColor = "gray"
 itemMedia.appendChild(input)
 reMediaLinkBtn.style.display = "none"
 })
+// При нажатии ВНЕ input появившегося описания || ссылка на инсту, инпуты пропадают а на их вместе появляются обновленные данные,также происходит изменения обьекта USER
 mainObject.addEventListener("click", function(event) {
 const descriptionObject = document.querySelector(".media") 
 const mediaObject = document.querySelector(".description")

@@ -61,8 +61,7 @@ setTimeout(() => {
 },50)
 
 })
-// Открытие меню стилей а также инициализаация ранее использованных стилей
-
+// Открытие меню стилей а также загрузка ранее использованных стилей
 menuButton.addEventListener("click", function(event) {
     style.style.transform = "translateX(0px)"
     const img = document.createElement("img")
@@ -100,6 +99,7 @@ menuButton.addEventListener("click", function(event) {
         })
        }
     })
+    // Обрботчик событий на кнопку "галерея"
     galleryButton.addEventListener("click", function(event) {
         iframeInfo.src = "/profileGallery.html"
         aside.style.transform = "translateX(0px)"
@@ -120,8 +120,7 @@ menuButton.addEventListener("click", function(event) {
         },100)
     })
     
-    // Закрытие всех окон
-    
+    // Закрытие всех окон, в случае если пользователь кликнет в пустую область
     window.addEventListener("click", function(event){
         const asid = event.target.closest(".aside")
         const menuStyles = event.target.closest(".styles")
@@ -138,7 +137,7 @@ menuButton.addEventListener("click", function(event) {
     
     // Обьект для позже сгенерированного изображения
     const imageOptions = {
-        size: "square",
+        size: "square_hd",
         prompt: null,
         style: null
     }
@@ -207,7 +206,7 @@ menuButton.addEventListener("click", function(event) {
         readyPrompt.textContent = imageOptions.prompt
         const card = new photoCard(src, 0, imageOptions.prompt, user._name, new Date, user.secretId)
         card.sendCard(card)
-        
+        exitSite()
         })
     }
 ).catch(error => console.error(error));
@@ -238,6 +237,8 @@ menuButton.addEventListener("click", function(event) {
    }
  })
 
+
+// Пережиток прошлого(пусть будет,не зря же писал :) )
  /*
  window.addEventListener("message", (event) => {
     if (event.data.type === "domElement") {
@@ -252,6 +253,8 @@ menuButton.addEventListener("click", function(event) {
     }
 });
 */
+
+// Получение сообщения от дочернего IFRAME,а также проверка его,начинется ли свойств обьект на "https", if true, user.socialMedia = message
 window.addEventListener("message", function(event) {
     const message = event.data
     console.log(message)
@@ -262,6 +265,7 @@ window.addEventListener("message", function(event) {
     }
     
 })
+// Обрботчик события на выход с сайта(какого-то хрена не работает user's method "exitSite":( )
 window.addEventListener('beforeunload', function(event) {
     exitSite()
     event.preventDefault()

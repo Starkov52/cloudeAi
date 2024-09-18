@@ -1,4 +1,4 @@
-//Анимация для первых двух картинок
+// Инициализация всех активных  обьектов
 const cityImgObject = document.querySelector(".city")
 const spaceImgObject = document.querySelector(".space")
 const cityText = document.querySelector(".city__text")
@@ -20,6 +20,7 @@ const text1 = document.querySelector(".whiteWindow__text1")
 const text2 = document.querySelector(".whiteWindow__text2")
 const text3 = document.querySelector(".whiteWindow__text3")
 const writeWindowBtn = document.querySelector(".whiteWindow__btn")
+// Анимация картинк при заходе на сайт
 window.addEventListener("load", function(event) {
     cityImgObject.style.transform = "translateX(100px)"
     this.setTimeout(()=> {
@@ -46,6 +47,7 @@ if(scrollY >= 0) {
 
 })
 const blackHole = document.createElement("div")
+// Появление черной дыры при нажатии на кнопку начать
 startBtn.addEventListener("click", function(event) {
     startBtn.style.background = `url("/img/broken-frosted-glass-realistic-icon.png") no-repeat center / cover`
     startBtn.style.opacity = "0"
@@ -64,6 +66,7 @@ startBtn.addEventListener("click", function(event) {
     main.appendChild(blackHole)
     animatedBlackHole()
 })
+// Анимация черной дыры
 function animatedBlackHole() {
    const blackHoleInterval = setInterval(() => {
         
@@ -141,7 +144,7 @@ setTimeout(()=> {
 }
 // Иницализация всех активных обьектов
 const themeBtn = document.querySelector(".header__darhTheme")
-// Система переключение свтеовой темы
+// Система переключение темы сайта
 let digitsCheckThem = 2
 themeBtn.addEventListener("click", function(event) {
     if(digitsCheckThem % 2 === 0) {

@@ -14,6 +14,7 @@ class User {
         this._imageProfile = imageProfile;
         this.secretId = secretId
     }
+    // Методы клaссa user
     setName(name) {
      this._name = name;
     }
@@ -60,12 +61,14 @@ class User {
         }
         
      }
+     // Подготовка свойства generetedPhoto(MAP) к отправки в БД(превращение его в обычный обьект)
      createObject(objectPhoto) {
         for(let [key, value] of user.generatedPhoto.entries()) { 
             objectPhoto[key] = value  
         }
         user.generatedPhoto = objectPhoto
      }
+     // Извлечение из ответа БД generetedPhoto и деструктуризция его в MAP
      parseObject(profile) {
         user.generatedPhoto = new Map()
         if(profile) {
@@ -81,7 +84,7 @@ class User {
      
 }
 
-// Система сохранения данных при выходе с сайта
+// Система сохранения данных при выходе с сайта(С помощью методов user превращает в обьект и затем отпрвляет в БД, следом преврщает в map, дабы пользовтель мог дальше генерировть изображениe)
      function exitSite(event) {
         
             const objectPhoto = {}
@@ -91,18 +94,18 @@ class User {
         console.log(user.generatedPhoto)
          realTimeDataBase.post("PATCH", `${realTimeDataBase.url}users/${user.secretId}.json`, user)
          realTimeDataBase.get("GET",`${realTimeDataBase.url}users.json`).then((response) => {
-            for(let [key, value] of response) {
+            for(let [key, value] of Object.entries(response)) {
                 if(key === user.secretId) {
-                    const user = value
+                   
                     console.log(value)
-                    user.parseObject(user)
+                    user.parseObject(value.generatedPhoto)
                 }
             }
          })
     };
     
 
-// Система отправки в БД всех опубликованных фото
+// Класс карты 
 class photoCard {
       url = "https://telegrambotfishcombat-default-rtdb.firebaseio.com/"
     constructor(image, like, description, userName, date, id) {
@@ -116,6 +119,7 @@ class photoCard {
     like() {
         this.like += 1;
     }
+    // Метод который отправляет карту в БД
     sendCard(card) {
         realTimeDataBase.post("POST", `${realTimeDataBase.url}usersCards.json`, card).then((data) => console.log(data)).catch((error) => console.log(error))
     }

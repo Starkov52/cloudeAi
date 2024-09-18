@@ -1,7 +1,7 @@
 // синхронизаация данных с БД при открытиее меню аккаунта
 const iframe = document.querySelector(".aside__profile")
 
-
+// Функция которая отпрвляет данные о аккаунте дочернему IFRAME
  function updateData() {
     const object = {
     description: user.description,
