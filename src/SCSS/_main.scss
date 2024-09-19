@@ -531,3 +531,40 @@ border-radius: 5px;
 .account.active {
     display: block
 }
+.notificationD {
+    width: 450px;
+    height: 200px;
+    border-radius: 10px;
+    background-color:rgba(0, 0, 0, 0.7);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    gap: 25px 0;
+    left: 680px;
+    top: 250px;
+    &__text {
+        color:aliceblue;
+    }
+    &__button0 {
+        width: 150px;
+        height: 40px;
+        border-radius: 5px;
+        background-color: gray;
+    }
+    &__button1 {
+        width: 150px;
+        height: 40px;
+        border-radius: 5px;
+        background-color: gray;
+    }
+    &__warningIcon {
+        width: 64px;
+        height: 64px;
+    }
+    &__div {
+        display: flex;
+        gap: 0 130px;
+    }
+}

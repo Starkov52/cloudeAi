@@ -662,7 +662,7 @@ a {
   position: relative;
   margin-right: 100px;
 }
-.registrationWindow__inputNameA, .registrationWindow__inputNameR {
+.registrationWindow__inputNameA, .registrationWindow__inputNameR, .registrationWindow__inputAdminPassword {
   width: 200px;
   height: 20px;
   border: none;

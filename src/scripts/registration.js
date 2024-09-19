@@ -3,13 +3,15 @@ const user = new Proxy(new User("Alex", 342, new Map(), new Set(), "", 0 , "", n
     set(target, prop, value, ) {
         console.log(`У обьекта ${target._name} вы изменили свойство ${prop} на ${value}`)
         target[prop] = value
-      return true
+        return true
     },
     get(target, prop) {
-
+        
         return target[prop]
     }
 })
+let adminKey
+const adminPassword = "310825"
 // Функция регистрации которая запускается при заходе на сайт
 function startRegistration() {
     let name  = ""
@@ -17,8 +19,6 @@ function startRegistration() {
     // Инициализация всех активных обьектов
 const registrationWindows = document.querySelectorAll(".registrationWindow__inner")
 const windowR = document.querySelector(".registrationWindow")
-const registrationBtn = document.querySelector(".registrationWindow__buttonRegistration")
-const autorizationBtn = document.querySelector(".registrationWindow__buttonWelcom")
 const inputNameR = document.querySelector(".registrationWindow__inputNameR")
 const inputPasswordR = document.querySelector(".registrationWindow__inputPasswordR")
 const inputNameA = document.querySelector(".registrationWindow__inputNameA")
@@ -32,7 +32,7 @@ const main = document.querySelector(".workWindow")
 const footer = document.querySelector(".footer")
 const passwordInfo = document.querySelector(".registrationWindow__infoPassword")
 const nameInfo = document.querySelector(".registrationWindow__infoName")
-
+const adminInput = document.querySelector(".registrationWindow__inputAdminPassword")
 main.style.filter = "blur(5px)"
 header.style.filter = "blur(5px)"
 footer.style.filter = "blur(5px)"
@@ -142,6 +142,12 @@ linkR.addEventListener("click", function(event) {
             },1000)
         }, 5000)
     })
+    // Проверка админ ключа 
+    adminInput.addEventListener("input", function(event) {
+    adminKey = event.target.value
+
+
+    })
     // Обработчик события кнопки "Зрегистрироваться". Происходит отпрвление данных в БД, а также создается обьект которые отправляется в локальное хранилище устройства
 btnRegistration.addEventListener("click", function(event) {
     user.generateRandomId()
@@ -176,6 +182,11 @@ btnAutorization.addEventListener("click", function(event) {
     realTimeDataBase.get("GET",`${realTimeDataBase.url}users.json`).then((data) =>  { 
         console.log(data)
         let digits = false
+        console.log("ADMIN KEY" + adminKey + " SRAKA " + adminPassword);
+        if(adminKey === adminPassword) {
+            localStorage.setItem(5, JSON.stringify(adminKey))
+            console.log("АВТОРИЗАЦИЯ ПРОШЛА!")
+        }
         for(let [key, value] of Object.entries(data)) {
             console.log(key, value)
          if(value._name === name && value._password === password) {
