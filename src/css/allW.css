@@ -35,12 +35,25 @@ li {
   height: 55px;
   background-color: rgb(182, 182, 182);
 }
+.footer__item:hover {
+  width: 95px;
+  height: 50px;
+  -webkit-transition: 1s ease;
+  transition: 1s ease;
+}
 .footer__item1 {
   border-radius: 5px;
   width: 104px;
   height: 55px;
   background: url("../img/kandinsky-download-1723899170820.png");
 }
+.footer__img:hover {
+  width: 95px;
+  height: 50px;
+  -webkit-transition: 1s ease;
+  transition: 1s ease;
+}
+
 ::-webkit-scrollbar {
   height: 5px;
 }
@@ -258,6 +271,16 @@ li {
   border-radius: 20px;
   -webkit-transition: background-color 0.7s ease;
   transition: background-color 0.7s ease;
+}
+.header__documentation {
+  width: 50px;
+  height: 50px;
+  border: none;
+  background: transparent;
+}
+.header__documentationImg {
+  width: 50px;
+  height: 50px;
 }
 
 button {
@@ -623,6 +646,55 @@ a {
   display: none;
 }
 
+.documentation {
+  position: absolute;
+  top: 10px;
+  left: 440px;
+  width: 900px;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  border-radius: 10px;
+  overflow-y: auto;
+  display: none;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  z-index: 1000000000000000000;
+  font-family: "Roboto Slab", serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
+.documentation__inner {
+  background-color: rgb(255, 255, 255);
+  width: 820px;
+  height: 190%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.documentation__closeIcon {
+  position: fixed;
+  top: 20px;
+  left: 1250px;
+}
+
+.documentation.active {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 .registrationWindow {
   font-family: "Dela Gothic One", sans-serif;
   font-weight: 350;
@@ -737,6 +809,22 @@ a {
 }
 
 @media (min-width: 1920px) {
+  .documentation {
+    position: absolute;
+    top: 15px;
+    left: 500px;
+    width: 900px;
+    height: 90%;
+  }
+  .documentation__inner {
+    width: 820px;
+    height: 290%;
+  }
+  .documentation__closeIcon {
+    position: fixed;
+    top: 20px;
+    left: 1300px;
+  }
   .picture.acitve {
     display: grid;
     position: absolute;
@@ -822,6 +910,22 @@ a {
   }
 }
 @media (max-width: 1600px) {
+  .documentation {
+    position: absolute;
+    top: 5px;
+    left: 340px;
+    width: 900px;
+    height: 80%;
+  }
+  .documentation__inner {
+    width: 820px;
+    height: 290%;
+  }
+  .documentation__closeIcon {
+    position: fixed;
+    top: 20px;
+    left: 1150px;
+  }
   .picture.active {
     left: 270px;
     top: 80px;
@@ -882,6 +986,22 @@ a {
   }
 }
 @media (max-width: 1536px) {
+  .documentation {
+    position: absolute;
+    top: 15px;
+    left: 340px;
+    width: 900px;
+    height: 90%;
+  }
+  .documentation__inner {
+    width: 820px;
+    height: 290%;
+  }
+  .documentation__closeIcon {
+    position: fixed;
+    top: 20px;
+    left: 1150px;
+  }
   .picture.active {
     display: grid;
     position: absolute;
@@ -960,6 +1080,22 @@ a {
   }
 }
 @media (max-width: 1440px) {
+  .documentation {
+    position: absolute;
+    top: 15px;
+    left: 280px;
+    width: 900px;
+    height: 90%;
+  }
+  .documentation__inner {
+    width: 820px;
+    height: 290%;
+  }
+  .documentation__closeIcon {
+    position: fixed;
+    top: 20px;
+    left: 1100px;
+  }
   .picture.active {
     display: grid;
     position: absolute;
@@ -1039,6 +1175,22 @@ a {
   }
 }
 @media (max-width: 1366px) {
+  .documentation {
+    position: absolute;
+    top: 15px;
+    left: 240px;
+    width: 900px;
+    height: 90%;
+  }
+  .documentation__inner {
+    width: 820px;
+    height: 290%;
+  }
+  .documentation__closeIcon {
+    position: fixed;
+    top: 20px;
+    left: 1050px;
+  }
   .picture.active {
     display: grid;
     position: absolute;
@@ -1116,6 +1268,22 @@ a {
   }
 }
 @media (max-width: 1280px) {
+  .documentation {
+    position: absolute;
+    top: 15px;
+    left: 190px;
+    width: 900px;
+    height: 90%;
+  }
+  .documentation__inner {
+    width: 820px;
+    height: 290%;
+  }
+  .documentation__closeIcon {
+    position: fixed;
+    top: 20px;
+    left: 1050px;
+  }
   .picture.active {
     display: grid;
     position: absolute;
@@ -1196,6 +1364,22 @@ a {
   }
 }
 @media (max-width: 1024px) {
+  .documentation {
+    position: absolute;
+    top: 15px;
+    left: 200px;
+    width: 900px;
+    height: 90%;
+  }
+  .documentation__inner {
+    width: 820px;
+    height: 290%;
+  }
+  .documentation__closeIcon {
+    position: fixed;
+    top: 20px;
+    left: 1050px;
+  }
   .header {
     width: 970px;
     height: 100px;
@@ -1245,6 +1429,23 @@ a {
   }
 }
 @media (max-width: 490px) {
+  .documentation {
+    position: absolute;
+    top: 15px;
+    left: 5px;
+    width: 380px;
+    height: 95%;
+  }
+  .documentation__inner {
+    width: 370px;
+    height: 440%;
+  }
+  .documentation__closeIcon {
+    position: fixed;
+    top: 20px;
+    left: 350px;
+    z-index: 66;
+  }
   .picture.active {
     display: -webkit-box;
     display: -ms-flexbox;

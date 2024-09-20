@@ -1,4 +1,21 @@
 @media(min-width: 1920px) {
+    .documentation {
+        position: absolute;
+        top: 15px;
+        left: 500px;
+        width: 900px;
+        height: 90%;
+        &__inner {
+            width: 820px;
+        height: 290%;
+        }
+           &__closeIcon {
+               position: fixed;
+               top: 20px;
+               left: 1300px;
+           }
+       
+       }
     .picture.acitve {
         display: grid;
         position: absolute;
@@ -86,6 +103,23 @@
                 }
 }
 @media(max-width:1600px) {
+    .documentation {
+        position: absolute;
+        top: 5px;
+        left: 340px;
+        width: 900px;
+        height: 80%;
+        &__inner {
+            width: 820px;
+        height: 290%;
+        }
+           &__closeIcon {
+               position: fixed;
+               top: 20px;
+               left: 1150px;
+           }
+       
+       }
     .picture.active {
         left: 270px;
         top: 80px;
@@ -171,6 +205,23 @@
                 }
 }
 @media(max-width:1536px) {
+    .documentation {
+        position: absolute;
+        top: 15px;
+        left: 340px;
+        width: 900px;
+        height: 90%;
+        &__inner {
+            width: 820px;
+        height: 290%;
+        }
+           &__closeIcon {
+               position: fixed;
+               top: 20px;
+               left: 1150px;
+           }
+       
+       }
     .picture.active {
         display: grid;
         position: absolute;
@@ -264,6 +315,23 @@
                 }
 }
 @media(max-width: 1440px) {
+    .documentation {
+        position: absolute;
+        top: 15px;
+        left: 280px;
+        width: 900px;
+        height: 90%;
+        &__inner {
+            width: 820px;
+        height: 290%;
+        }
+           &__closeIcon {
+               position: fixed;
+               top: 20px;
+               left: 1100px;
+           }
+       
+       }
     .picture.active {
         display: grid;
         position: absolute;
@@ -357,6 +425,23 @@
     }    
 }
     @media(max-width: 1366px) {
+        .documentation {
+            position: absolute;
+            top: 15px;
+            left: 240px;
+            width: 900px;
+            height: 90%;
+            &__inner {
+                width: 820px;
+            height: 290%;
+            }
+               &__closeIcon {
+                   position: fixed;
+                   top: 20px;
+                   left: 1050px;
+               }
+           
+           }
         .picture.active {
             display: grid;
             position: absolute;
@@ -446,6 +531,23 @@
                     }
     }
     @media(max-width:1280px) {
+        .documentation {
+            position: absolute;
+            top: 15px;
+            left: 190px;
+            width: 900px;
+            height: 90%;
+            &__inner {
+                width: 820px;
+            height: 290%;
+            }
+               &__closeIcon {
+                   position: fixed;
+                   top: 20px;
+                   left: 1050px;
+               }
+           
+           }
         .picture.active {
             display: grid;
             position: absolute;
@@ -541,6 +643,23 @@
     }
     
     @media(max-width: 1024px) {
+        .documentation {
+            position: absolute;
+            top: 15px;
+            left: 200px;
+            width: 900px;
+            height: 90%;
+            &__inner {
+                width: 820px;
+            height: 290%;
+            }
+               &__closeIcon {
+                   position: fixed;
+                   top: 20px;
+                   left: 1050px;
+               }
+           
+           }
         .header {
             
             width: 970px;
@@ -610,7 +729,24 @@
     }
     @media(max-width: 490px) {
        
-       
+        .documentation {
+            position: absolute;
+            top: 15px;
+            left: 5px;
+            width: 380px;
+            height: 95%;
+            &__inner {
+                width: 370px;
+            height: 440%;
+            }
+               &__closeIcon {
+                   position: fixed;
+                   top: 20px;
+                   left: 350px;
+                   z-index: 66
+               }
+           
+           }
         .picture.active {
             display: flex;
             flex-direction: column;

@@ -8,6 +8,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Manrope:wght@200..800&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="icon" href="/img/free-icon-abstract-art-6301259.png" type="image/png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
   </head>
   <body>
     <header class="header">
@@ -44,6 +48,9 @@
           <span class="header__dowlandText">Скачать</span>
           <img src="/img/free-icon-download-8141102 1.png" class="header__dowlandImg"/>
         </div>
+        <button class="header__documentation">
+          <img class="header__documentationImg" src="/img/free-icon-archive-432607.png"/>
+        </button>
         <button class="header__darkTheme">
           <img class="header__darkThemeIcon" src="/img/free-icon-sun-6421095.png">
         </button>
@@ -161,6 +168,102 @@
           </button>
           <a class="registrationWindow__linkR" href="#" >Вернуться ко входу</a>
        </div>
+      </section>
+      <section class="documentation">
+        <div class="documentation__inner">
+          <img class="documentation__closeIcon" src="/img/free-icon-cross-2716333.png"/>
+          <h1 class="documentation__title">Документация проекта: Cloude Ai(Генерация изображений с помощью нейросети)</h1>
+          <h2 class="documentation__title2">Описание проекта</h2>
+          <p class="documentation__text">Данный проект представляет собой веб-сайт, на котором пользователи могут генерировать изображения с использованием нейросети. Сайт включает в себя систему аккаунтов, позволяющую пользователям управлять своими сгенерированными изображениями, а также функцию ленты, на которой отображаются изображения, созданные другими пользователями.</p>
+          <h2 class="documentation__title2">Основные функции проекта</h2>
+          <ul class="documentation__infoList">
+            <li class="documentation__item">
+           <ul class="documentation__listInner">
+            <li class="documentation__itemInner">
+              <p class="documentation__itemInnerText">Пользователи могут вводить текстовые запросы (промпты) для генерации изображений.</p>
+            </li>
+            <li class="documentation__itemInner">
+              <p class="documentation__itemInnerText">Запросы отправляются на API нейросети, а результаты обрабатываются и отображаются на сайте.</p>
+            </li>
+           </ul>  
+            </li>
+            <h2 class="documentation__title2">Система аккаунтов</h2>
+            <ul class="documentation__listInner">
+              <li class="documentation__itemInner">
+                <p class="documentation__itemInnerText">Пользователи могут создавать учетные записи для управления своими сгенерированными изображениями.</p>
+              </li>
+              <li class="documentation__itemInner">
+                <p class="documentation__itemInnerText">Реализована система аутентификации и управления сессиями, что обеспечивает безопасность учетных записей.</p>
+              </li>
+              </ul>
+              <h2 class="documentation__title2">Галерея пользователя</h2>
+              <ul class="documentation__listInner">
+                <li class="documentation__itemInner">
+                  <p class="documentation__itemInnerText">Каждому пользователю доступна персональная галерея, в которую сохраняются все сгенерированные ими изображения.</p>
+                </li>
+                <li class="documentation__itemInner">
+                  <p class="documentation__itemInnerText">Пользователи могут просматривать, удалять или делиться своими изображениями.</p>
+                </li>
+
+              </ul>
+              <h2 class="documentation__title2">Общая лента</h2>
+              <ul class="documentation__listInner">
+                <li class="documentation__itemInner">
+                  <p class="documentation__itemInnerText">На главной странице отображается лента с изображениями, созданными всеми пользователями.</p>
+                </li>
+                <li class="documentation__itemInner">
+                  <p class="documentation__itemInnerText">Каждое изображение сопровождается текстом промпта и другой информацией, что позволяет пользователям изучать работы друг друга.</p>
+                </li>
+
+              </ul>
+              <h2 class="documentation__title2">Навигация</h2>
+              <ul class="documentation__listInner">
+                <li class="documentation__itemInner">
+                  <p class="documentation__itemInnerText">Удобная навигация между различными разделами сайта (галерея, лента, профиль пользователя).</p>
+                </li>
+                <li class="documentation__itemInner">
+                  <p class="documentation__itemInnerText">Интуитивно понятный интерфейс, позволяющий легко находить нужные функции.</p>
+                </li>
+              </ul>
+              <h1 class="documentation__title">Технические детали</h1>
+              <h2 class="documentation__title2">Cтек Технологий</h2>
+              <ul class="documentation__listInner">
+                <li class="documentation__itemInner">
+                  <p class="documentation__itemInnerText">HTML & CSS & SCSS: для разметки и стилизации страниц.</p>
+                </li>
+                <li class="documentation__itemInner">
+                  <p class="documentation__itemInnerText">JavaScript: для динамического взаимодействия с пользователем(логика всего сайта)</p>
+                </li>
+                <li class="documentation__itemInner">
+                  <p class="documentation__itemInnerText">Firebase: БД для хранения данных о пользователях и их изображениях. А также хостинг сайта</p>
+                </li>
+                <li class="documentation__itemInner">
+                  <p class="documentation__itemInnerText">GIT: Для создания репозитория с помощью которого можно отслеживать версии проекта</p>
+                </li>
+                <li class="documentation__itemInner">
+                  <p class="documentation__itemInnerText">GITHUB: Хостинг репозитория</p>
+                </li>
+              </ul>
+              <h2 class="documentation__title2">API нейросети</h2>
+              <ul class="documentation__listInner">
+                <li class="documentation__itemInner">
+                  <p class="documentation__itemInnerText">Сайт использует внешний API для генерации изображений на основе текстовых запросов.</p>
+                </li>
+                <li class="documentation__itemInner">
+                  <p class="documentation__itemInnerText">Обработка ответов API включает в себя отображение полученных изображений и их сохранение в базе данных.(ХРАНЕНИЕ ИЗОБРАЖЕНИЯ ДЕЙСТВУЕТ НЕ БОЛЕЕ 1 ЧАСА!)</p>
+                </li>
+              </ul>
+              <h2 class="documentation__title2">Управление состоянием</h2>
+              <ul class="documentation__listInner">
+                <li class="documentation__itemInner">
+                  <p class="documentation__itemInnerText">Использование JavaScript для управления состоянием приложения, обработки событий и манипуляции с DOM.</p>
+                </li>
+                <li class="documentation__itemInner">
+                  <p class="documentation__itemInnerText">Динамическое обновление интерфейса при изменении данных (например, при добавлении нового изображения в галерею).</p>
+                </li>
+              </ul>
+          </ul>
+        </div>
       </section>
     </main>
  

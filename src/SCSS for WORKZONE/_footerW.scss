@@ -28,6 +28,11 @@ li {
         height: 55px;
         background-color:rgb(182, 182, 182);
     }
+    &__item:hover {
+        width: 95px;
+        height: 50px;
+        transition:  1s ease;
+    }
     &__item1 {
         border-radius: 5px;
         width: 104px;
@@ -38,6 +43,12 @@ li {
     &__img {
         
     }
+    &__img:hover {
+        width: 95px;
+        height: 50px;
+        transition:  1s ease;
+    }
+
 }
 
 ::-webkit-scrollbar {

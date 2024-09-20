@@ -188,6 +188,7 @@ menuButton.addEventListener("click", function(event) {
         const photoPlenka = document.createElement("li")
         photoPlenka.style.background = `url(${src}) no-repeat center / cover`
         photoPlenka.classList.add("footer__item")
+        photoPlenka.setAttribute("image", src)
         footerUl.appendChild(photoPlenka)
         const scale = document.createElement("img")
         scale.src = "/img/free-icon-resize-8121828 1.png"
@@ -195,6 +196,9 @@ menuButton.addEventListener("click", function(event) {
         scale.style.left = "320px"
         user.addGeneretePhoto([src, new Date])
         pcContainer.appendChild(scale)
+        const card = new photoCard(src, 0, imageOptions.prompt, user._name, new Date, user.secretId)
+        card.sendCard(card)
+        exitSite()
         pcContainer.addEventListener("click", function(event) {
         readyPictureWindow.classList.add("active")
         readyImage.src = src
@@ -204,9 +208,7 @@ menuButton.addEventListener("click", function(event) {
         }
         readyDowlandLink.href = src
         readyPrompt.textContent = imageOptions.prompt
-        const card = new photoCard(src, 0, imageOptions.prompt, user._name, new Date, user.secretId)
-        card.sendCard(card)
-        exitSite()
+     
         })
     }
 ).catch(error => console.error(error));
@@ -218,6 +220,17 @@ menuButton.addEventListener("click", function(event) {
     
 }
 })
+
+// Обработчик события на фотопленку
+footerUl.addEventListener("click", function(event) {
+    const targetImage = event.target.closest(".footer__item")
+    if(targetImage) {
+    readyPictureWindow.classList.add("active")
+    const img = targetImage.getAttribute("image")
+    readyImage.src = img
+    }
+})
+
 // Система переключения на светлую тему а также темную
  let darkTheme = true
  selectThemeBtn.addEventListener("click", function(event) {
@@ -270,6 +283,20 @@ window.addEventListener('beforeunload', function(event) {
     exitSite()
     event.preventDefault()
     event.returnValue = ""
+})
+
+// Открытие/Закрытие окна документации 
+const documentationWindow = document.querySelector(".documentation")
+const openDocumentationBtn = document.querySelector(".header__documentation")
+
+openDocumentationBtn.addEventListener("click", function(event) {
+    documentationWindow.classList.add("active")
+})
+
+const closeDocumentationBtn = document.querySelector(".documentation__closeIcon")
+
+closeDocumentationBtn.addEventListener("click", function(event) {
+documentationWindow.classList.remove("active")
 })
 
  
